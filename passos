@@ -1,0 +1,12 @@
+npm init
+
+
+npm i --s express 
+
+npm i --s node-telegram-bot-api
+
+
+
+
+npm install moment --save
+

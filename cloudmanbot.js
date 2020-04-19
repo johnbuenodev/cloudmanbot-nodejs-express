@@ -5,7 +5,7 @@ const moment = require('moment');
 
 module.exports = function(){
 
-const token = '1209059583:AAFUcqAa21HJ0uXGSezVxwdMDOd-V1_V4CE'   
+const token = 'xxxxxxx'   
 //cloudman
 
 const bot = new TelegramBot(token, {polling: true});

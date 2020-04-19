@@ -6,7 +6,124 @@ npm i --s express
 npm i --s node-telegram-bot-api
 
 
-
+npm i request
 
 npm install moment --save
 
+formato json weatherapi
+
+location.name, location.region, location.country, location.tz_id, .location.localtime,
+current.temp.c, current.wind_kph, current.humidity, current.vis_km
+
+{
+  location: {
+    name: 'Brasilia',
+    region: 'Distrito Federal',
+    country: 'Brazil',
+    lat: -15.78,
+    lon: -47.92,
+    tz_id: 'America/Sao_Paulo',
+    localtime_epoch: 1587326786,
+    localtime: '2020-04-19 17:06'
+  },
+  current: {
+    last_updated_epoch: 1587326410,
+    last_updated: '2020-04-19 17:00',
+    temp_c: 26,
+    temp_f: 78.8,
+    is_day: 1,
+    condition: {
+      text: 'Overcast',
+      icon: '//cdn.weatherapi.com/weather/64x64/day/122.png',
+      code: 1009
+    },
+    wind_mph: 12.5,
+    wind_kph: 20.2,
+    wind_degree: 100,
+    wind_dir: 'E',
+    pressure_mb: 1019,
+    pressure_in: 30.6,
+    precip_mm: 0,
+    precip_in: 0,
+    humidity: 65,
+    cloud: 50,
+    feelslike_c: 27.5,
+    feelslike_f: 81.4,
+    vis_km: 10,
+    vis_miles: 6,
+    uv: 8,
+    gust_mph: 13.6,
+    gust_kph: 22
+  }
+}
+
+
+
+Formato json openweatherapi
+
+
+api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+
+api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid={your api key}
+
+
+
+
+main.temp, main.humidity, wind.speed, dt_iso,
+
+{"city_id": 5128581,
+"main": {
+    "temp": 271.9,
+    "temp_min": 270.15,
+    "temp_max": 274.15,
+    "pressure": 1010,
+    "humidity": 86},
+"wind": {
+    "speed": 2.1,
+    "deg": 30},
+"clouds": {"all": 90},
+"weather": [{
+    "id": 701,
+    "main": "Mist",
+    "description": "mist","icon": "50n"},
+    {
+    "id": 600,
+    "main": "Snow",
+    "description": "light snow","icon": "13n"}],
+"dt": 1485907200,
+"dt_iso": "2017-02-01 00:00:00 +0000 UTC"}
+
+******************
+
+main.temp, main.humidity, wind.speed, sys.country, name, dt
+
+{
+  coord: { lon: -47.46, lat: -23.5 },
+  weather: [
+    { id: 801, main: 'Clouds', description: 'few clouds', icon: '02n' }
+  ],
+  base: 'stations',
+  main: {
+    temp: 297.15,
+    feels_like: 294.54,
+    temp_min: 297.15,
+    temp_max: 297.15,
+    pressure: 1020,
+    humidity: 47
+  },
+  visibility: 10000,
+  wind: { speed: 4.6, deg: 130 },
+  clouds: { all: 20 },
+  dt: 1587332569,
+  sys: {
+    type: 1,
+    id: 8393,
+    country: 'BR',
+    sunrise: 1587288301,
+    sunset: 1587329536
+  },
+  timezone: -10800,
+  id: 3447399,
+  name: 'Sorocaba',
+  cod: 200
+}
